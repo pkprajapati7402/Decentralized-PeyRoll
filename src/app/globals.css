@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 261 80% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 255 100% 81%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 261 80% 58%;
+    --radius: 0.5rem;
+
+    --dashboard-bg: 0 0% 100%;
+    --sidebar-bg: 0 0% 98%;
+    --card-bg: 0 0% 96%;
+  }
+ 
+  .dark {
+    --background: 256 58% 7%;
+    --foreground: 210 40% 98%;
+    --card: 256 58% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 256 58% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 261 80% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 255 100% 81%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 261 80% 58%;
+
+    --dashboard-bg: 256 58% 7%;
+    --sidebar-bg: 240 24% 10%;
+    --card-bg: 240 21% 12%;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bg-grid {
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 30 0 L 0 0 0 30' fill='none' stroke='%237042E6' stroke-width='0.3'/%3E%3C/svg%3E");
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-grid-fade {
+  mask-image: linear-gradient(to bottom, 
+    transparent,
+    rgba(0, 0, 0, 0.015) 10%,
+    rgba(0, 0, 0, 0.015) 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(to bottom, 
+    transparent,
+    rgba(0, 0, 0, 0.015) 10%,
+    rgba(0, 0, 0, 0.015) 90%,
+    transparent 100%
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #13111C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #352F44;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7042E6;
+}
